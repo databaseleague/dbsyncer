@@ -29,6 +29,12 @@ public class RowChangedEvent {
         this.dataMap = data;
     }
 
+    public RowChangedEvent(String sourceTableName, String event, Map<String, Object> data) {
+        this.sourceTableName = sourceTableName;
+        this.event = event;
+        this.dataMap = data;
+    }
+
     public RowChangedEvent(String sourceTableName, String event, List<Object> data) {
         this.sourceTableName = sourceTableName;
         this.event = event;

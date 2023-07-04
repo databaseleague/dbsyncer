@@ -19,6 +19,7 @@ public class KafkaConfig extends AbstractConnectorConfig {
     private String groupId;
     private int sessionTimeoutMs;
     private int maxPartitionFetchBytes;
+    private long pollTimeout;
 
     // 生产者
     private String serializer;
@@ -139,5 +140,13 @@ public class KafkaConfig extends AbstractConnectorConfig {
 
     public void setMaxRequestSize(int maxRequestSize) {
         this.maxRequestSize = maxRequestSize;
+    }
+
+    public long getPollTimeout() {
+        return pollTimeout;
+    }
+
+    public void setPollTimeout(long pollTimeout) {
+        this.pollTimeout = pollTimeout;
     }
 }
